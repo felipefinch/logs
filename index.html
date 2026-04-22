@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Vue 3 App</title>
+    <!-- Load Vue 3 from CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <!-- The "Mount Point": Vue will manage everything inside this div -->
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <button @click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.message = this.message.split('').reverse().join('');
+                }
+            }
+        }).mount('#app'); // Tells Vue to take control of the #app element
+    </script>
+</body>
+</html>
