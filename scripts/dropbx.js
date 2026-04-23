@@ -24,4 +24,9 @@ const uploadJson = async (data, filename) => {
   }
 };
 
-uploadJson({ test: "data" }, "my_file.json");
+uploadJson({
+  "name": "John Doe",
+  "age": 30,
+  "isEmployee": true,
+  "department": null
+}, "my_file.json");
