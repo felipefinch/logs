@@ -19,15 +19,14 @@ const uploadJson = async (data, filename) => {
 
     const result = await response.json();
     console.log('Upload Result:', result);
-    console.log('Data Content:', result.body);
   } catch (err) {
     console.error('Upload failed:', err);
   }
 };
 
-uploadJson({
-  "name": "Peter Legs",
-  "age": 30,
-  "isEmployee": true,
-  "department": null
-}, "my_file.json");
+// uploadJson({
+//   "name": "Peter Legs",
+//   "age": 30,
+//   "isEmployee": true,
+//   "department": null
+// }, "my_file.json");
