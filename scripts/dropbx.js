@@ -25,7 +25,7 @@ const uploadJson = async (data, filename) => {
 };
 
 uploadJson({
-  "name": "John Doe",
+  "name": "Peter Legs",
   "age": 30,
   "isEmployee": true,
   "department": null
