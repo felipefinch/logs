@@ -1,9 +1,9 @@
 import { Dropbox } from 'dropbox';
 
 const dbx = new Dropbox({
-  clientId: '<APP_KEY>',
-  clientSecret: '<APP_SECRET>',
-  refreshToken: '<YOUR_REFRESH_TOKEN>'
+  clientId: '<DROPBOX_APP_KEY>',
+  clientSecret: '<DROPBOX_APP_SECRET>',
+  refreshToken: '<DROPBOX_REFRESH_TOKEN>'
 });
 
 // The SDK handles the refresh automatically when calling methods
