@@ -1,4 +1,4 @@
-import { Dropbox } from 'dropbox';
+const { Dropbox } = require('dropbox');
 
 const dbx = new Dropbox({
   clientId: '<DROPBOX_APP_KEY>',
