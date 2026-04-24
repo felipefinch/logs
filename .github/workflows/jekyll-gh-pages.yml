@@ -37,6 +37,18 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload to Dropbox
+        uses: Lewuathe/dropbox-github-action@v1
+        with:
+          dropbox_app_key: ${{ secrets.DRPBOX_APP_K }}
+          dropbox_app_secret: ${{ secrets.DRPBOX_APP_S }}
+          dropbox_refresh_token: ${{ secrets.DRPBOX_REF_TOKEN }}
+          src: ./myfile.txt
+          dest: /backups/myfile.txt
 
   # Deployment job
   deploy:
