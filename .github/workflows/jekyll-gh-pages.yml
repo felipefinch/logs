@@ -42,7 +42,10 @@ jobs:
           DRPBX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DRPBX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DRPBX_APP_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-        run: 
+        run: |
+             echo "App Key: $DRPBX_APP_KEY"
+             echo "App Secret: $DRPBX_APP_SECRET"
+             echo "App Token: $DRPBX_APP_TOKEN"
          
   # Deployment job
   deploy:
