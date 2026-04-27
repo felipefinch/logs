@@ -11,5 +11,3 @@ jobs:
           dropbox_refresh_token: ${{ secrets.DRPBOX_REF_TOKEN }}
           src: ./myfile.txt
           dest: /backups/myfile.txt
-      - name: Preview in LiveCodes
-        uses: live-codes/preview-in-livecodes@v1.1.1
